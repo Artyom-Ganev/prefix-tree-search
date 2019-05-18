@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import ru.ganev.prefix_tree_search.model.Word;
 import ru.ganev.prefix_tree_search.service.IWordService;
 
-import java.util.List;
-
 @Controller
 public class App {
 
@@ -17,7 +15,7 @@ public class App {
 
     @GetMapping("/words")
     public String findCities(Model model) {
-        List<Word> words = wordService.findAll();
+        Iterable<Word> words = wordService.findAll();
         model.addAttribute("words", words);
         return "words";
     }

@@ -4,12 +4,16 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "name")
+@Table(name = "word")
 public class Word {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "status")
     private boolean status;
 
     public Word() {
@@ -72,7 +76,7 @@ public class Word {
         if (this.status != other.status) {
             return false;
         }
-        return Objects.equals(this.id, other.id);
+        return this.id == other.id;
     }
 
     @Override
