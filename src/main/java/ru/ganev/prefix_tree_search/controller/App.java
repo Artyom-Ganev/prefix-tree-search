@@ -14,7 +14,7 @@ public class App {
     private IWordService wordService;
 
     @GetMapping("/words")
-    public String findCities(Model model) {
+    public String findWords(Model model) {
         Iterable<Word> words = wordService.findAll();
         model.addAttribute("words", words);
         return "words";
