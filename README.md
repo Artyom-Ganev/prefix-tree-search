@@ -1,1 +1,1 @@
-# The Implementation of Prefix Tree Seacrh using Spring Boot
+# The Implementation of Prefix Tree Search using Spring Boot
